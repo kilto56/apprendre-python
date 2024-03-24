@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+.head_title {
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 110%;
+}
+
+p {
+    font-size: 15px;
+}
+
+pre {
+    font-size: 12px;
+}
+
+.set {
+    background-image: url("../img/695439-fond-de-techno-avec-grille-de-connexion-gratuit-vectoriel.jpg");
+    background-size: cover;
+    padding: 0 0 20px 0;
+}
+
+.head {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.head .menu .a {
+    color: #83FBFD;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 2px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.head .menu .a a {
+    text-decoration: none;
+    color: #83fbfdc6;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .head .menu .a a {
+        font-size: 10px;
+    }
+
+    .head .menu .a:hover a {
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 9px;
+    }
+}
+
+.head .menu .a:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px #83FBFD;
+}
+
+.head .menu .a:hover a {
+    transition: all 0.3s ease;
+    color: white;
+    @media only screen and (max-width: 750px) {
+        font-size: 9px;
+    }
+    @media only screen and (min-width: 750px) {
+        font-size: 90%;
+    }
+}
+
+.corps {
+    padding: 20px;
+}
+
+.syntbase, .fonctsymb, .fonctions, .diverses {
+    margin: 0 10%;
+    border-radius: 20px;
+    border: solid 1px grey;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contain .title {
+    margin-bottom: 20px;
+}
+
+.contain .title p {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.contain .title hr {
+    width: 75%;
+    transform: translateX(15%);
+}
+
+.info {
+    display: flex;
+}
+
+.info button {
+    padding: 7px 20px;
+    color: white;
+    background: linear-gradient(45deg, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    border: solid 1px rgba(255, 255, 255, 0.408);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.info button:hover {
+    transition: all 0.7s ease;
+    box-shadow: 0px 0px 10px white;
+    font-size: 90%;
+    background: linear-gradient(45deg, #d362e03b, #2e1cb33e, #2e1cb33e, #2e1cb33e, #74fbf247);
+}
+
+.footer {
+    padding: 15px;
+}
+
+.footer pre {
+    color: rgb(169, 168, 168);
+}
