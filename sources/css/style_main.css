@@ -192,7 +192,7 @@ pre {
 
 .theme details[open] {
     transition: all 0.5s ease;
-    max-height: 520px;
+    max-height: 1520px;
     overflow: visible;
 }
 
