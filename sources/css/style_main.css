@@ -155,3 +155,64 @@ pre {
 .footer pre {
     color: rgb(169, 168, 168);
 }
+
+.apprendre-page {
+    background-color: white;
+    padding: 20px;
+}
+
+.theme-section {
+    padding: 2px;
+    color: black;
+}
+
+.theme details summary {
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.theme details {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #d362e0;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+}
+
+.theme details[open] summary {
+    border-bottom: solid 1px #d362e0;
+    transition: all 0.5s ease;
+}
+
+.theme details[open] {
+    transition: all 0.5s ease;
+    max-height: 120px;
+    overflow: visible;
+}
+
+.theme details p {
+    color: black;
+    font-size: 13.5px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.theme details[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+    from {
+        opacity: 0;
+        margin-left: -10px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
