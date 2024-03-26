@@ -173,7 +173,7 @@ pre {
     transition: all 0.5s ease;
 }
 
-.theme details {
+.theme .details1 {
     color: black;
     font-size: 13.5px;
     border: solid 1px #d362e0;
@@ -183,14 +183,16 @@ pre {
     overflow: hidden;
 }
 
-.theme details[open] summary {
+.theme .details1[open] summary {
     border-bottom: solid 1px #d362e0;
     transition: all 0.5s ease;
+    background-color: lightgrey;
+    border-radius: 10px 10px 0 0;
 }
 
 .theme details[open] {
     transition: all 0.5s ease;
-    max-height: 120px;
+    max-height: 520px;
     overflow: visible;
 }
 
@@ -199,6 +201,10 @@ pre {
     font-size: 13.5px;
     padding: 10px;
     transition: all 0.5s ease;
+}
+
+.theme details b, .theme details u {
+    color: black;
 }
 
 .theme details[open] summary ~ * {
@@ -215,4 +221,138 @@ pre {
         opacity: 1;
         margin-left: 0px;
     }
+}
+
+.intro h1 {
+    color: black;
+    font-style: italic;
+}
+
+.intro {
+    padding: 10px;
+}
+
+.theme .details2 {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #9d62e0;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+}
+
+.theme .details2[open] summary {
+    border-bottom: solid 1px #9d62e0;
+    transition: all 0.5s ease;
+    background-color: lightgrey;
+}
+
+.theme .details3 {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #628ae0;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+.theme .details3[open] summary {
+    border-bottom: solid 1px #628ae0;
+    transition: all 0.5s ease;
+    background-color: lightgrey;
+}
+
+.code-exemple-before-starting {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(80, 80, 80);
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.code-exemple-before-starting .head-code {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.code-exemple-before-starting .head-code .python-code, .code-exemple-before-starting .head-code .js-code, .code-exemple-before-starting .head-code .cpp-code {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-top: solid 1px black;
+    padding: 10px;
+    width: 33%;
+    transition: all 0.3s ease;
+}
+
+.python-code {
+    border-radius: 10px 0 0 0;
+}
+
+.cpp-code {
+    border-radius: 0 10px 0 0;
+}
+
+.code-exemple-before-starting .head-code .python-code:hover, .code-exemple-before-starting .head-code .js-code:hover, .code-exemple-before-starting .head-code .cpp-code:hover {
+    background-color: rgb(92, 92, 92);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.code-n-output {
+    background-color: rgb(48, 48, 48);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+}
+
+.not-selected {
+    border-bottom: solid 1px black;
+}
+
+.selected {
+    background-color:rgb(48, 48, 48)
+}
+
+.code-exemple {
+    width: 60%;
+    border-right: solid 2px black;
+    padding: 10px;
+}
+
+.output-exemple {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.code-yellow {
+    color: rgb(231, 231, 129);
+}
+
+.code-caract-yellow {
+    color: rgb(201, 201, 49);
+}
+
+.code-text-brown {
+    color: rgb(230, 146, 97);
+}
+
+.code-var-lightblue {
+    color: lightblue;
+}
+
+.code-comment-green {
+    color: green;
+}
+
+.code-text-violet {
+    color: #9d62e0;
+}
+
+.code-text-red {
+    color: red;
 }
