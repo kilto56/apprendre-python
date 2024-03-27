@@ -369,3 +369,62 @@ pre {
 .code-text-red {
     color: red;
 }
+
+.recap h3 {
+    color: black;
+    font-style: italic;
+}
+
+.recap {
+    padding: 10px;
+}
+
+.recap-txt {
+    padding: 10px;
+}
+
+.recap-txt p {
+    color: black;
+}
+
+.recap b {
+    color: black;
+}
+
+.recap button {
+    color: black;
+    padding: 7px 10px;
+    border-radius: 20px;
+    border: solid 0px;
+    background-color: #263cff68;
+    box-shadow: 0 0 5px #263cff;
+    transition: all ease 0.3s;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recap p::before {
+    content: "";
+    padding: 0px;
+    transition: all ease 0.3s;
+}
+
+.recap button:hover {
+    background-color: #9d62e079;
+    box-shadow: 0 0 10px #d362e0;
+    transition: all ease 0.3s;
+}
+
+.recap button:hover p::before {
+    content: "⮟";
+    padding: 0 5px;
+    transition: all ease 0.3s;
+    position: relative;
+    top: -0.5px;
+}
+
+.button:hover p {
+    position: relative;
+}
