@@ -403,19 +403,93 @@ pre {
 }
 
 .valeurs {
-    padding: 10px;
+    padding: 10px 20px;
 }
 
-.texte {
-    background-color: grey;
-    padding: 20px;
-    border: solid 1px black;
+.texte, .number-int, .number-float, .bool {
+    background-color: rgb(244, 246, 254);
+    padding: 20px 20px 20px 0;
+    border: solid 1px rgb(144, 144, 144);
     border-radius: 10px;
-    width: 33%;
     transition: all 0.5s ease;
+    margin: 5px;
+    box-shadow: 0 0 10px rgb(220, 243, 255);
+    display: flex;
+}
+
+.texte i, .number-int i, .number-float i, .bool i {
+    color: black;
+    text-align: right;
+    width: 100%;
+    font-size: 11px;
+    position: relative;
+    top: 10px;
+    transition: all 0.2s ease;
+}
+
+.texte:hover i, .number-int:hover i, .number-float:hover i, .bool:hover i {
+    color: rgb(94, 94, 94);
+    transition: all 0.2s ease;
+}
+
+.texte:hover, .number-int:hover, .number-float:hover, .bool:hover {
+    cursor: pointer;
+}
+
+.texte:hover p, .number-int:hover p, .number-float:hover p, .bool:hover p {
+    color: rgb(94, 94, 94);
+    transition: all 0.2s ease;
 }
 
 .rotated {
     transform: rotateY(180deg);
     transition: all 0.5s ease;
+}
+
+.invert {
+    transform: scaleX(-1);
+}
+
+.valeurs h1 {
+    color: black;
+    font-style: italic;
+}
+
+.valeurs p {
+    color: black;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.valeurs p b {
+    color: black;
+}
+
+.types-valeurs {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contain-valeurs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ruban {
+    width: 3px;
+    background: linear-gradient(#d362e0, #9d62e0, #628ae0);
+    margin-right: 9px;
+    border-radius: 0 10px 10px 0;
+}
+
+.indice-valeurs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
 }
