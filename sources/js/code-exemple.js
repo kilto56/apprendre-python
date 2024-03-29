@@ -22,7 +22,7 @@ blocPython.addEventListener("click", () => {
         blocCpp.classList.toggle("not-selected");
     };
 
-    codeText.innerHTML = "<span class='code-yellow'>print</span><span class='code-caract-yellow'>(</span><span class='code-text-brown'>'Hello world !'</span><span class='code-caract-yellow'>)</span>";
+    codeText.innerHTML = "<span class='code-yellow'>print</span><span class='code-caract-yellow'>(</span><span class='code-text-brown'>&#34;Hello world !&#34;</span><span class='code-caract-yellow'>)</span>";
 });
 
 blocJs.addEventListener("click", () => {
@@ -41,7 +41,7 @@ blocJs.addEventListener("click", () => {
         blocPython.classList.toggle("not-selected");
     };
 
-    codeText.innerHTML = "<span class='code-var-lightblue'>console.</span><span class='code-yellow'>log</span><span class='code-caract-yellow'>(<span><span class='code-text-brown'>'Hello world !'</span><span class='code-caract-yellow'>)<span>;";
+    codeText.innerHTML = "<span class='code-var-lightblue'>console.</span><span class='code-yellow'>log</span><span class='code-caract-yellow'>(<span><span class='code-text-brown'>&#34;Hello world !&#34;</span><span class='code-caract-yellow'>)<span>;";
 });
 
 blocCpp.addEventListener("click", () => {
@@ -60,5 +60,5 @@ blocCpp.addEventListener("click", () => {
         blocJs.classList.toggle("not-selected");
     };
 
-    codeText.innerHTML = "<span class='code-text-violet'>#include</span> <span class='code-text-red'>&lt;iostream&gt;</span><br><span class='code-text-violet'>using</span> <span class='code-var-lightblue'>namespace</span> std;<br><br><span class='code-var-lightblue'>int</span> <span class='code-yellow'>main</span><span class='code-caract-yellow'>() {</span><br>&nbsp;&nbsp;std::cout << <span class='code-text-brown'>'Hello world !'</span>;<br><span class='code-caract-yellow'>}</span>";
+    codeText.innerHTML = "<span class='code-text-violet'>#include</span> <span class='code-text-red'>&lt;iostream&gt;</span><br><span class='code-text-violet'>using</span> <span class='code-var-lightblue'>namespace</span> std;<br><br><span class='code-var-lightblue'>int</span> <span class='code-yellow'>main</span><span class='code-caract-yellow'>() {</span><br>&nbsp;&nbsp;std::cout << <span class='code-text-brown'>&#34;Hello world !&#34;</span>;<br><span class='code-caract-yellow'>}</span>";
 });
