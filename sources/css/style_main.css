@@ -415,6 +415,7 @@ pre {
     margin: 5px;
     box-shadow: 0 0 10px rgb(220, 243, 255);
     display: flex;
+    max-height: 100px;
 }
 
 .texte i, .number-int i, .number-float i, .bool i {
@@ -444,6 +445,7 @@ pre {
 .rotated {
     transform: rotateY(180deg);
     transition: all 0.5s ease;
+    max-height: 250px;
 }
 
 .invert {
@@ -470,6 +472,12 @@ pre {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+    @media only screen and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .contain-valeurs {
@@ -492,4 +500,8 @@ pre {
     align-items: center;
     justify-content: center;
     padding: 10px 0;
+}
+
+.justify-texte {
+    text-align: justify;
 }
