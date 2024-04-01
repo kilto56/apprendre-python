@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement libre</title>
+    <link rel="stylesheet" href="./sources/css/style_main.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+    <div class="set">
+        <div class="head">
+            <div class="title">
+                <img src=""/>
+                <h1 class="head_title">Python</h1>
+            </div>
+            <br>
+            <div class="menu">
+                <div class="a one"><a>Syntaxe de base</a></div>
+                <div class="a two"><a>Fonctionnement des symboles</a></div>
+                <div class="a three"><a>Les fonctions</a></div>
+                <div class="a four"><a>Diverses</a></div>   
+            </div>
+            <br>
+            <hr>
+        </div>
+
+        <form class="code-python">
+            <div class="code-python-script">
+                <div class="code-python-script-title">
+                    <div class="one-title">
+                        <h4>Script</h4>
+                    </div>
+                    <button id="btn-launch-code" class="launch-code" pys-onclick="runPython">Lancer</button>
+                </div>
+                <div class="code-python-script-text">
+                    <textarea id="code">print("Hello world !")</textarea>
+                </div>
+            </div>
+            <div class="code-python-output">
+                <div class="code-python-output-title">
+                    <h4>Shell</h4>
+                </div>
+                <div class="output-code">
+                    <p id='py-script'></p>
+                    <py-script>
+                        def runPython(event):
+                            code = Element("code").element.value
+                            result = eval(code)
+                            pyscript.write("py-script", result)
+
+                    </py-script>
+                </div>                    
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="copyr">
+            <pre>Copyright Killian Maldeme</pre>
+            <pre>Tout droits d'auteur réservés.</pre>
+        </div>
+    </div>
+
+    <!--<div id="root"></div>
+
+    <script src="./sources/react/setup.jsx"></script>-->
+    <script src="./sources/js/script.js"></script>
+</html>
