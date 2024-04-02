@@ -46,12 +46,13 @@
                     <p id='py-script'></p>
                     <py-script>
                         from pyscript import when, display, document
+                        from js import prompt
                         import time
 
                         @when("click", "#btn-launch-code")
                         def runPython(event):
                             code = document.querySelector('#code').value
-                            script = f"""{code.replace("print", "display")}"""
+                            script = f"""{code.replace("print", "display").replace("input", "prompt")}"""
                             exec(script.replace("print", "display"))
                     </py-script>
                 </div>                    
