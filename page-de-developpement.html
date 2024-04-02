@@ -26,13 +26,13 @@
             <hr>
         </div>
 
-        <form class="code-python">
+        <div class="code-python">
             <div class="code-python-script">
                 <div class="code-python-script-title">
                     <div class="one-title">
                         <h4>Script</h4>
                     </div>
-                    <button id="btn-launch-code" class="launch-code" pys-onclick="runPython">Lancer</button>
+                    <button id="btn-launch-code" class="launch-code" py-onclick="runPython">Lancer</button>
                 </div>
                 <div class="code-python-script-text">
                     <textarea id="code">print("Hello world !")</textarea>
@@ -45,15 +45,18 @@
                 <div class="output-code">
                     <p id='py-script'></p>
                     <py-script>
-                        def runPython(event):
-                            code = Element("code").element.value
-                            result = eval(code)
-                            pyscript.write("py-script", result)
+                        from pyscript import when, display, document
+                        import time
 
+                        @when("click", "#btn-launch-code")
+                        def runPython(event):
+                            code = document.querySelector('#code').value
+                            script = f"""{code.replace("print", "display")}"""
+                            exec(script.replace("print", "display"))
                     </py-script>
                 </div>                    
             </div>
-        </form>
+        </div>
     </div>
     <div class="footer">
         <div class="copyr">
