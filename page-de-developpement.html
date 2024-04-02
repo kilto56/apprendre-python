@@ -51,9 +51,19 @@
 
                         @when("click", "#btn-launch-code")
                         def runPython(event):
-                            code = document.querySelector('#code').value
-                            script = f"""{code.replace("print", "display").replace("input", "prompt")}"""
-                            exec(script.replace("print", "display"))
+                            try:
+                                output = document.querySelector('#py-script')
+                                def logout(argms):
+                                    output.innerHTML = argms
+                                output.innerHTML = ''
+                                code = document.querySelector('#code').value
+                                script = f"""{code.replace("print", "logout").replace("input", "prompt")}""" 
+                                exec(script)
+                            except Exception as e:
+                                if e != "undefined":
+                                    output = document.querySelector('#py-script')
+                                    output.innerHTML = ''
+                                    output.innerHTML = e
                     </py-script>
                 </div>                    
             </div>
