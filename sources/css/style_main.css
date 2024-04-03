@@ -362,6 +362,10 @@ pre {
     color: lightblue;
 }
 
+.code-caract-blue {
+    color: rgb(58, 58, 255);
+}
+
 .code-comment-green {
     color: green;
 }
@@ -372,6 +376,15 @@ pre {
 
 .code-text-red {
     color: red;
+}
+
+.extract-code {
+    position: relative;
+    top: 20px;
+    left: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(48, 48, 48, 0.242);
 }
 
 .recap h3 {
@@ -506,6 +519,10 @@ pre {
     text-align: justify;
 }
 
+.align-texte {
+    text-align: center;
+}
+
 .code-python {
     margin: 20px;
     display: flex;
@@ -598,4 +615,60 @@ pre {
         height: 142px;
         border-radius: 0 0 10px 10px;
     }
+}
+
+.sommaire-syntaxe-de-base {
+    padding: 15px;
+    background-color: rgba(128, 128, 128, 0.282);
+    margin: 10px 20px;
+    position: relative;
+    border-radius: 20px; /* Coins arrondis */
+    padding: 20px; /* Pour donner de l'espace pour le contenu à l'intérieur de la bordure */
+    background: 
+        linear-gradient(to right, #d362e0, #9d62e0, #628ae0) top left,
+        linear-gradient(to right, #628ae0, #628ae0) top right,
+        linear-gradient(to right, #d362e0, #9d62e0, #628ae0) bottom right,
+        linear-gradient(to right, #d362e0, #d362e0) bottom left;
+    background-size: calc(100%) 2px, 2px calc(100%);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+
+.sommaire-syntaxe-de-base h1 {
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
+
+.sommaire-type {
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    background: linear-gradient(to right, transparent, transparent, transparent);
+    transition: all 0.2s ease;
+}
+
+.sommaire-type p {
+    color: black;
+    animation: sweep-down 0.5s ease-in-out;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+@keyframes sweep-down {
+    from {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.sommaire-type:hover {
+    background: linear-gradient(to right, #d362e05d, #9d62e066, #628ae063);
+    transition: all 0.2s ease;
 }
