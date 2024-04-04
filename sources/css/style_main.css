@@ -155,6 +155,8 @@ pre {
 
 .footer {
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer pre {
@@ -672,3 +674,4 @@ pre {
     background: linear-gradient(to right, #d362e05d, #9d62e066, #628ae063);
     transition: all 0.2s ease;
 }
+
