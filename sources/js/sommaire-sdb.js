@@ -6,6 +6,8 @@ for (let i = 0; i < 5; i++) {
             document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
         } else if (i === 1) {
             document.getElementById('valeurs').scrollIntoView({ behavior: 'smooth' });
-        }
-    })
+        } else if (i === 2) {
+            document.getElementById('variables').scrollIntoView({ behavior: 'smooth'});
+        };
+    });
 };
