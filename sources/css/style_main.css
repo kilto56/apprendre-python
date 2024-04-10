@@ -722,6 +722,10 @@ pre {
     }
 }
 
+.left-contain-acti-var {
+    height: auto;
+}
+
 .left-contain-acti-var, .right-contain-acti-var {
     background-color: #F4F6FE;
     color: black;
@@ -807,7 +811,7 @@ pre {
     border: dashed 1px black;
     margin: 5px 0;
     border-radius: 10px;
-    height: 45px;
+    height: auto;
     width: 100%;
 }
 
@@ -839,4 +843,8 @@ pre {
     padding: 10px;
     text-align: center;
     margin-top: 10px;
+}
+
+.empty {
+    height: 45px;
 }
