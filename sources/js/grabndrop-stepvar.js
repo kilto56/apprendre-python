@@ -7,7 +7,10 @@ for (list of lists) {
     list.addEventListener("dragstart", (e) => {
         let selected = e.target;
         selected.classList.toggle("dragged");
-        selected.parentElement.classList.add("empty");
+
+        if (selected.parentElement.classList.contains("contain-list-step")) {
+            selected.parentElement.classList.add("empty");
+        };
 
         rightSide.addEventListener("dragover", (e) => {
             e.preventDefault();
