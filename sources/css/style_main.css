@@ -724,6 +724,10 @@ pre {
 
 .left-contain-acti-var {
     height: auto;
+    overflow: scroll;
+    scrollbar-color: grey grey;
+    scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 .left-contain-acti-var, .right-contain-acti-var {
