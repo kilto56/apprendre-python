@@ -9,9 +9,20 @@ let rightSide = document.querySelector(".right-contain-acti-var-steps");
 let lists = document.getElementsByClassName("list-step");
 
 if (!(window.mobileAndTabletCheck)) {
+    let offsetX, offsetY;
 
     for (list of lists) {
+        /*
         list.addEventListener("touchstart", (e) => {
+            let selected = e.target;
+            e.preventDefault();
+            selected.classList.toggle("dragged");
+            e.style.zIndex = "999";
+            e.style.position = "absolute";
+
+            if (selected.parentElement.classList.contains("contain-list-step")) {
+                selected.parentElement.classList.add("empty");
+            };
             
         });
 
@@ -21,6 +32,48 @@ if (!(window.mobileAndTabletCheck)) {
 
         list.addEventListener("touchend", (e) => {
             
+        });*/
+
+
+        list.addEventListener('touchstart', (e) => {
+            const rect = list.getBoundingClientRect();
+            offsetX = e.touches[0].clientX - rect.left;
+            offsetY = e.touches[0].clientY - rect.top;
+
+            let selected = e.target;
+            selected.classList.toggle("dragged");
+
+            if (selected.parentElement.classList.contains("contain-list-step")) {
+                selected.parentElement.classList.add("empty");
+            };
+        });
+        
+        list.addEventListener('touchmove', (e) => {
+            e.preventDefault(); // Prevent page scrolling
+            const x = e.touches[0].clientX - offsetX;
+            const y = e.touches[0].clientY - offsetY;
+            draggable.style.left = x + 'px';
+            draggable.style.top = y + 'px';
+        });
+        
+        let target = rightSide;
+
+        list.addEventListener('touchend', (e) => {
+            const rect = list.getBoundingClientRect();
+            const targetRect = target.getBoundingClientRect();
+            const draggableCenterX = rect.left + rect.width / 2;
+            const draggableCenterY = rect.top + rect.height / 2;
+        
+            // Check if the draggable is dropped inside the target
+            if (
+              draggableCenterX >= targetRect.left &&
+              draggableCenterX <= targetRect.right &&
+              draggableCenterY >= targetRect.top &&
+              draggableCenterY <= targetRect.bottom
+            ) {
+              target.appendChild(draggable); // Append draggable to target
+              draggable.style.position = 'inline'; // Reset position
+            }
         });
     };
 
