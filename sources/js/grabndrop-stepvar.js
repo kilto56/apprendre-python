@@ -8,157 +8,157 @@ let leftSide = document.querySelectorAll(".contain-list-step");
 let rightSide = document.querySelector(".right-contain-acti-var-steps");
 let lists = document.getElementsByClassName("list-step");
 
-if (!(window.mobileAndTabletCheck)) {
-    let offsetX, offsetY;
 
-    for (list of lists) {
-        /*
-        list.addEventListener("touchstart", (e) => {
-            let selected = e.target;
-            e.preventDefault();
-            selected.classList.toggle("dragged");
-            e.style.zIndex = "999";
-            e.style.position = "absolute";
+let offsetX, offsetY;
 
-            if (selected.parentElement.classList.contains("contain-list-step")) {
-                selected.parentElement.classList.add("empty");
-            };
-            
-        });
+for (list of lists) {
+    /*
+    list.addEventListener("touchstart", (e) => {
+        let selected = e.target;
+        e.preventDefault();
+        selected.classList.toggle("dragged");
+        e.style.zIndex = "999";
+        e.style.position = "absolute";
 
-        list.addEventListener("touchmove", (e) => {
-            
-        });
-
-        list.addEventListener("touchend", (e) => {
-            
-        });*/
-
-
-        list.addEventListener('touchstart', (e) => {
-            const rect = list.getBoundingClientRect();
-            offsetX = e.touches[0].clientX - rect.left;
-            offsetY = e.touches[0].clientY - rect.top;
-
-            let selected = e.target;
-            selected.classList.toggle("dragged");
-
-            if (selected.parentElement.classList.contains("contain-list-step")) {
-                selected.parentElement.classList.add("empty");
-            };
-        });
+        if (selected.parentElement.classList.contains("contain-list-step")) {
+            selected.parentElement.classList.add("empty");
+        };
         
-        list.addEventListener('touchmove', (e) => {
-            e.preventDefault(); // Prevent page scrolling
-            const x = e.touches[0].clientX - offsetX;
-            const y = e.touches[0].clientY - offsetY;
-            draggable.style.left = x + 'px';
-            draggable.style.top = y + 'px';
-        });
+    });
+
+    list.addEventListener("touchmove", (e) => {
         
-        let target = rightSide;
+    });
 
-        list.addEventListener('touchend', (e) => {
-            const rect = list.getBoundingClientRect();
-            const targetRect = target.getBoundingClientRect();
-            const draggableCenterX = rect.left + rect.width / 2;
-            const draggableCenterY = rect.top + rect.height / 2;
+    list.addEventListener("touchend", (e) => {
         
-            // Check if the draggable is dropped inside the target
-            if (
-              draggableCenterX >= targetRect.left &&
-              draggableCenterX <= targetRect.right &&
-              draggableCenterY >= targetRect.top &&
-              draggableCenterY <= targetRect.bottom
-            ) {
-              target.appendChild(draggable); // Append draggable to target
-              draggable.style.position = 'inline'; // Reset position
-            }
-        });
-    };
+    });*/
 
-} else {
 
-    for (list of lists) {
-        list.addEventListener("dragstart", (e) => {
-            let selected = e.target;
-            selected.classList.toggle("dragged");
+    list.addEventListener('touchstart', (e) => {
+        const rect = list.getBoundingClientRect();
+        offsetX = e.touches[0].clientX - rect.left;
+        offsetY = e.touches[0].clientY - rect.top;
 
-            if (selected.parentElement.classList.contains("contain-list-step")) {
-                selected.parentElement.classList.add("empty");
-            };
+        let selected = e.target;
+        selected.classList.toggle("dragged");
 
-            rightSide.addEventListener("dragover", (e) => {
-                e.preventDefault();
-            });
+        if (selected.parentElement.classList.contains("contain-list-step")) {
+            selected.parentElement.classList.add("empty");
+        };
+    });
 
-            rightSide.addEventListener("drop", (e) => {
-                if (!(rightSide.children === 4)) {
-                    rightSide.appendChild(selected);
-                    selected.classList.add("dropped");
-                    selected = null;
-                };
-            });
+    list.addEventListener('touchmove', (e) => {
+        e.preventDefault(); // Prevent page scrolling
+        const x = e.touches[0].clientX - offsetX;
+        const y = e.touches[0].clientY - offsetY;
+        draggable.style.left = x + 'px';
+        draggable.style.top = y + 'px';
+    });
 
-            leftSide[0].addEventListener("dragover", (e) => {
-                if ((leftSide[0].classList.contains("empty"))) {
-                    e.preventDefault();
-                };
-            });
+    let target = rightSide;
 
-            leftSide[0].addEventListener("drop", (e) => {
-                leftSide[0].appendChild(selected);
-                selected.classList.remove("dropped");
-                leftSide[0].classList.remove("empty");
-                selected = null;
-            });
+    list.addEventListener('touchend', (e) => {
+        const rect = list.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
+        const draggableCenterX = rect.left + rect.width / 2;
+        const draggableCenterY = rect.top + rect.height / 2;
 
-            leftSide[1].addEventListener("dragover", (e) => {
-                if ((leftSide[1].classList.contains("empty"))) {
-                    e.preventDefault();
-                };
-            });
-
-            leftSide[1].addEventListener("drop", (e) => {
-                leftSide[1].appendChild(selected);
-                selected.classList.remove("dropped");
-                leftSide[1].classList.remove("empty");
-                selected = null;
-            });
-
-            leftSide[2].addEventListener("dragover", (e) => {
-                if ((leftSide[2].classList.contains("empty"))) {
-                    e.preventDefault();
-                };
-            });
-
-            leftSide[2].addEventListener("drop", (e) => {
-                leftSide[2].appendChild(selected);
-                selected.classList.remove("dropped");
-                leftSide[2].classList.remove("empty");
-                selected = null;
-            });
-
-            leftSide[3].addEventListener("dragover", (e) => {
-                if ((leftSide[3].classList.contains("empty"))) {
-                    e.preventDefault();
-                };
-            });
-
-            leftSide[3].addEventListener("drop", (e) => {
-                leftSide[3].appendChild(selected);
-                selected.classList.remove("dropped");
-                leftSide[3].classList.remove("empty");
-                selected = null;
-            });
-        });
-
-        list.addEventListener("dragend", (e) => {
-            let selected = e.target;
-            selected.classList.toggle("dragged");
-        });
-    };
+        // Check if the draggable is dropped inside the target
+        if (
+            draggableCenterX >= targetRect.left &&
+            draggableCenterX <= targetRect.right &&
+            draggableCenterY >= targetRect.top &&
+            draggableCenterY <= targetRect.bottom
+        ) {
+            target.appendChild(draggable); // Append draggable to target
+            draggable.style.position = 'inline'; // Reset position
+        }
+    });
 };
+
+
+
+for (list of lists) {
+    list.addEventListener("dragstart", (e) => {
+        let selected = e.target;
+        selected.classList.toggle("dragged");
+
+        if (selected.parentElement.classList.contains("contain-list-step")) {
+            selected.parentElement.classList.add("empty");
+        };
+
+        rightSide.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+
+        rightSide.addEventListener("drop", (e) => {
+            if (!(rightSide.children === 4)) {
+                rightSide.appendChild(selected);
+                selected.classList.add("dropped");
+                selected = null;
+            };
+        });
+
+        leftSide[0].addEventListener("dragover", (e) => {
+            if ((leftSide[0].classList.contains("empty"))) {
+                e.preventDefault();
+            };
+        });
+
+        leftSide[0].addEventListener("drop", (e) => {
+            leftSide[0].appendChild(selected);
+            selected.classList.remove("dropped");
+            leftSide[0].classList.remove("empty");
+            selected = null;
+        });
+
+        leftSide[1].addEventListener("dragover", (e) => {
+            if ((leftSide[1].classList.contains("empty"))) {
+                e.preventDefault();
+            };
+        });
+
+        leftSide[1].addEventListener("drop", (e) => {
+            leftSide[1].appendChild(selected);
+            selected.classList.remove("dropped");
+            leftSide[1].classList.remove("empty");
+            selected = null;
+        });
+
+        leftSide[2].addEventListener("dragover", (e) => {
+            if ((leftSide[2].classList.contains("empty"))) {
+                e.preventDefault();
+            };
+        });
+
+        leftSide[2].addEventListener("drop", (e) => {
+            leftSide[2].appendChild(selected);
+            selected.classList.remove("dropped");
+            leftSide[2].classList.remove("empty");
+            selected = null;
+        });
+
+        leftSide[3].addEventListener("dragover", (e) => {
+            if ((leftSide[3].classList.contains("empty"))) {
+                e.preventDefault();
+            };
+        });
+
+        leftSide[3].addEventListener("drop", (e) => {
+            leftSide[3].appendChild(selected);
+            selected.classList.remove("dropped");
+            leftSide[3].classList.remove("empty");
+            selected = null;
+        });
+    });
+
+    list.addEventListener("dragend", (e) => {
+        let selected = e.target;
+        selected.classList.toggle("dragged");
+    });
+};
+
 
 
 
