@@ -8,6 +8,8 @@ for (let i = 0; i < 5; i++) {
             document.getElementById('valeurs').scrollIntoView({ behavior: 'smooth' });
         } else if (i === 2) {
             document.getElementById('variables').scrollIntoView({ behavior: 'smooth'});
+        } else if (i === 3) {
+            document.getElementById('shell').scrollIntoView({ behavior: 'smooth'});
         };
     });
 };

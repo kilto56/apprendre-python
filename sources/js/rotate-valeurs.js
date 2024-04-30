@@ -31,7 +31,7 @@ int.addEventListener("click", () => {
         pInt.classList.toggle("invert");
         pInt.classList.toggle("justify-texte");
         if (!rotatedCard[1]) {
-            pInt.innerHTML = "Les nombres entiers sont utilisés pour faire des actions à répétitions ou compter. Il sont symbolisés sans guillemets et sans virgules.<br><span class='code-caract-blue align-texte extract-code'>18459</span>";
+            pInt.innerHTML = "Les nombres entiers sont utilisés pour faire des actions à répétitions ou compter. Il sont symbolisés sans guillemets et sans virgules.<br><span class='code-caract-green align-texte extract-code'>18459</span>";
             rotatedCard[1] = !rotatedCard[1];
         } else {
             pInt.innerHTML = "Les nombres entiers";
@@ -46,7 +46,7 @@ float.addEventListener("click", () => {
         pFloat.classList.toggle("invert");
         pFloat.classList.toggle("justify-texte");
         if (!rotatedCard[2]) {
-            pFloat.innerHTML = "Les nombres flottants (autrement dit : décimaux) sont utilisés pour faire des calculs complexes. Il sont symbolisés sans guillemets avec un point en guise de virgule et un/plusieurs chiffres à la suite.<br><span class='code-caract-blue align-texte extract-code'>143.5634</span>";
+            pFloat.innerHTML = "Les nombres flottants (autrement dit : décimaux) sont utilisés pour faire des calculs complexes. Il sont symbolisés sans guillemets avec un point en guise de virgule et un/plusieurs chiffres à la suite.<br><span class='code-caract-green align-texte extract-code'>143.5634</span>";
             rotatedCard[2] = !rotatedCard[2];
         } else {
             pFloat.innerHTML = "Les nombres flottants";

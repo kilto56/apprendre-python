@@ -202,6 +202,7 @@
             </div>
         </div>
 
+        <!--Les variables-->
         <div class="variables" id="variables">
             <h1>Les variables</h1>
             <p>&nbsp;&nbsp;Découvrons maintenant à quoi peuvent bien servir ces valeurs
@@ -215,7 +216,7 @@
             <hr>
             <br>
             <div class="contain-variables">
-                <p>Le concept est simple : replacez les étapes dans le bon ordre !</p>
+                <p>Le concept est simple : replacez les étapes dans le bon ordre ! <br><i>(PC recommendé)</i></p>
                 <div class="contain-acti-var">
                     <div class="left-contain-acti-var">
                         <div class="contain-list-step">
@@ -245,6 +246,66 @@
                     <button>Valider</button>
                     <p class="result-acti-var"></p>
                 </div>
+                <br>
+
+                <div class="suite-var">
+                    <p>Voici donc comment nous devons créer une variable (+ exemples):</p>
+                    <ol>
+                        <li>Réfléchir à quoi peut servir ma variable pour lui assigner la/les bonne(s) valeur(s),</li>
+                        <li>Lui donner un nom approprié pour la retrouver facilement (espaces symbolisés par un "_"),</li>
+                        <li>Mettre le signe d'assignation : le "égal" ("="),</li>
+                        <li>Assigner la valeur souhaité.</li>
+                    </ol>
+                    <br>
+                    <div class="suite-var-code-exemple">
+                        <p>
+                            <span class="code-var-lightblue">ma_variable</span> <span class="code-exemple-p">=</span> <span class="code-text-brown">"ceci est une variable qui contient cette chaine de caractères !"</span>
+                            <br>
+                            <br>
+                            <span class="code-var-lightblue">ma_deuxieme_variable</span> <span class="code-exemple-p">=</span> <span class="code-caract-green">1523</span>
+                            <br>
+                            <br>
+                            <span class="code-var-lightblue">ma_troisieme_variable</span> <span class="code-exemple-p">=</span> <span class="code-caract-blue">True</span>
+                            <br>
+                            <br>
+                            <span class="code-var-lightblue">ma_variable_4</span><span class="code-exemple-p">,</span> <span class="code-var-lightblue">ma_variable_5</span> <span class="code-exemple-p">=</span> <span class="code-text-brown">"Pour ma var 4"</span><span class="code-exemple-p">,</span> <span class="code-text-brown">"Pour ma var 5"</span>
+                        </p>
+                    </div>
+                    <br>
+                    <p>Nous pouvons voir que certaines fois pour instancier plusieurs variables rapidement on les collent avec une virgule. Puis après le symbole d'assignation ("="), on sépare aussi les valeurs de la même façon. Cela permet a la première variable de la ligne de récupérer la première valeur de la ligne et ainsi de suite...</p>
+                    <br>
+                    <p>Nous verrons par la suite qu'il existe d'autres valeurs assez particulières pour les variables !</p>
+                </div>
+            </div>
+        </div>
+
+        <!--La sortie-->
+        <div class="shell" id="shell">
+            <h1>La sortie de code/ Le shell</h1>
+            <p>
+                &nbsp;&nbsp;C'est bien beau d'écrire du code. Mais le voir évoluer et être executé c'est mieux ! 
+                Lorsqu'on execute notre code on <u>observe des choses</u> dans <b>la sortie (ou shell)</b>. 
+                Pour observer ces choses, nous avons besoin, en Python basique d'utiliser <b>print()</b>.
+                <br>
+                &nbsp;&nbsp;Cette fonction nous permet donc d'<u>afficher</u> ce que l'on veut dans la sortie de code.
+                <br>
+                &nbsp;&nbsp;Parfois il nous faudra acquerir des informations. 
+                Pour cela, une fonction existe. Elle est appelée <b>input()</b>.
+                Elle demande à l'utilisateur ayant lancer le code de donner des informations sous forme de texte.
+                Celle-ci peuvent être récuperées bien-sûr !
+            </p>
+            <br>
+            <br>
+            <p>Nous avons donc l'affichage du <b>print()</b> :</p>
+            <br>
+            <div class="shell-code-exemple">
+                <span class="code-yellow">print</span><span class="code-caract-yellow">(</span><span class="code-text-brown">"Hello world"</span><span class="code-caract-yellow">)</span>
+            </div>
+            <br>
+            <p>Et l'utilisation des demandes avec <b>input()</b></p>
+            <br>
+            <div class="shell-code-exemple">
+                <span class="code-var-lightblue">ma_variable</span> <span class="code-exemple-p">=</span> <span class="code-yellow">input</span><span class="code-caract-yellow">(</span><span class="code-text-brown">"Quel est votre nom ?"</span><span class="code-caract-yellow">)</span><br><span class="code-yellow">print</span><span class="code-caract-yellow">(</span><span class="code-var-lightblue">ma_variable</span><span class="code-caract-yellow">)</span>
             </div>
         </div>
     </div>

@@ -60,5 +60,5 @@ blocCpp.addEventListener("click", () => {
         blocJs.classList.toggle("not-selected");
     };
 
-    codeText.innerHTML = "<span class='code-text-violet'>#include</span> <span class='code-text-red'>&lt;iostream&gt;</span><br><span class='code-text-violet'>using</span> <span class='code-var-lightblue'>namespace</span> std;<br><br><span class='code-var-lightblue'>int</span> <span class='code-yellow'>main</span><span class='code-caract-yellow'>() {</span><br>&nbsp;&nbsp;std::cout << <span class='code-text-brown'>&#34;Hello world !&#34;</span>;<br><span class='code-caract-yellow'>}</span>";
+    codeText.innerHTML = "<span class='code-text-violet'>#include</span> <span class='code-text-red'>&lt;iostream&gt;</span><br><span class='code-text-violet'>using</span> <span class='code-var-lightblue'>namespace</span><span class='code-exemple-p'> std;</span><br><br><span class='code-var-lightblue'>int</span> <span class='code-yellow'>main</span><span class='code-caract-yellow'>() {</span><br>&nbsp;&nbsp;<span class='code-exemple-p'>std::cout <<</span> <span class='code-text-brown'>&#34;Hello world !&#34;</span>;<br><span class='code-caract-yellow'>}</span>";
 });

@@ -207,6 +207,10 @@ pre {
     overflow: visible;
 }
 
+.code-exemple-p {
+    color: white;
+}
+
 .theme details p {
     color: black;
     font-size: 13.5px;
@@ -356,6 +360,10 @@ pre {
     color: rgb(201, 201, 49);
 }
 
+.code-caract-green {
+    color: rgb(168, 239, 159);
+}
+
 .code-text-brown {
     color: rgb(230, 146, 97);
 }
@@ -386,7 +394,7 @@ pre {
     left: 25%;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(48, 48, 48, 0.242);
+    background-color: rgba(48, 48, 48, 0.393);
 }
 
 .recap h3 {
@@ -708,7 +716,7 @@ pre {
     padding: 10px;
 }
 
-.contain-variables p {
+.contain-variables p i {
     color: black;
     text-align: center
 }
@@ -746,6 +754,9 @@ pre {
 
 .right-contain-acti-var {
     display: flex;
+    @media only screen and (max-width: 450px) {
+        height: 270px;
+    }
 }
 
 .list-step {
@@ -803,6 +814,9 @@ pre {
     position: relative;
     right: 8px;
     top: 20px;
+    @media only screen and (max-width: 400px) {
+        padding: 15px 0;
+    }
 }
 
 .right-contain-acti-var-steps {
@@ -851,4 +865,40 @@ pre {
 
 .empty {
     height: 45px;
+}
+
+.suite-var {
+    padding: 0 35px 0;
+}
+
+.suite-var ol {
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+.suite-var-code-exemple {
+    padding: 20px 0px;
+    background-color: #303030;
+    border-radius: 10px;
+}
+
+.shell h1 {
+    padding: 10px;
+    color: black;
+    font-style: italic;
+}
+
+.shell p {
+    color: black;
+    padding: 0px 20px;
+}
+
+.shell p b, .shell p u {
+    color: black;
+}
+
+.shell-code-exemple {
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 10px;
 }
