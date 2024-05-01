@@ -373,7 +373,7 @@ pre {
 }
 
 .code-caract-blue {
-    color: rgb(58, 58, 255);
+    color: rgb(112, 112, 255);
 }
 
 .code-comment-green {
@@ -394,7 +394,7 @@ pre {
     left: 25%;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(48, 48, 48, 0.393);
+    background-color: #303030;
 }
 
 .recap h3 {
