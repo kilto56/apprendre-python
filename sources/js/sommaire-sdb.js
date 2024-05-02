@@ -10,6 +10,8 @@ for (let i = 0; i < 5; i++) {
             document.getElementById('variables').scrollIntoView({ behavior: 'smooth'});
         } else if (i === 3) {
             document.getElementById('shell').scrollIntoView({ behavior: 'smooth'});
+        } else if (i === 4) {
+            document.getElementById('melange').scrollIntoView({ behavior: 'smooth'});
         };
     });
 };

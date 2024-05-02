@@ -902,3 +902,57 @@ pre {
     background-color: #303030;
     border-radius: 10px;
 }
+
+.melange {
+    padding: 10px;
+}
+
+.melange h1 {
+    color: black;
+}
+
+.melange-content {
+    padding: 10px;
+}
+
+.melange-content p {
+    color: black;
+}
+
+.note-melange {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.note-melange-barre-cote {
+    width: 10px;
+    background: linear-gradient(to bottom, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    border-radius: 5px 0 0 5px;
+}
+
+.note-melange-content {
+    margin: 10px;
+}
+
+.note-melange-title h4 {
+    color: black;
+}
+
+.note-melange-description {
+    padding: 10px;
+}
+
+.note-melange-description p {
+    color: black;
+}
+
+.note-code-exemple {
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 10px;
+    margin: 15px;
+}
