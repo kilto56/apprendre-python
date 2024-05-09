@@ -120,7 +120,7 @@ button.addEventListener("click", () => {
     if (currentPage == 1) {
         currentPage = 2;
         title.innerHTML = "Question 1/10";
-        content.innerHTML = "Quelles sont les principales caratéristique de Python ?";
+        content.innerHTML = "Qu'est ce que Python";
         
         let contentChoices = document.createElement("div");
         contentChoices.style.color = "black";
@@ -174,7 +174,7 @@ button.addEventListener("click", () => {
     } else if (currentPage == 4) {
         currentPage = 5;
         title.innerHTML = "Question 4/10";
-        content.innerHTML = "Pourquoi ne faut-il pas mettre d'espace entre deux mots du nom d'une variable lorsqu'on la crée ?";
+        content.innerHTML = "Pourquoi un nom de variable ne doit pas être composé de deux mots séparés d'un espace ?";
         
         let contentChoices = document.createElement("div");
         contentChoices.style.color = "black";
@@ -188,12 +188,12 @@ button.addEventListener("click", () => {
     } else if (currentPage == 5) {
         currentPage = 6;
         title.innerHTML = "Question 5/10";
-        content.innerHTML = "À quoi peuvent servir les booléens ?";
+        content.innerHTML = "Dans quels cas les booléens sont utiles ?";
 
         let contentChoices = document.createElement("div");
         contentChoices.style.color = "black";
         contentChoices.style.margin = "15px";
-        contentChoices.innerHTML = "1 - Ils servent à faire des formulaires.<br>2 - Ils servent à savoir si quelque-chose est fait ou non.<br>3 - Ils servent à faire des choix à notre place.<br>4 - Ils ne servent que dans les variables.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
+        contentChoices.innerHTML = "1 - Ils servent à faire des formulaires.<br>2 - Ils servent à dire VRAI ou FAUX.<br>3 - Ils servent dans les conditions.<br>4 - Ils ne servent que dans les variables.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
 
         content.appendChild(contentChoices);
         content.appendChild(containerInput);
@@ -221,7 +221,7 @@ button.addEventListener("click", () => {
         let contentChoices = document.createElement("div");
         contentChoices.style.color = "black";
         contentChoices.style.margin = "15px";
-        contentChoices.innerHTML = "1 - Elles servent à nous simplifier la vie.<br>2 - Elles servent à être réutilisées, modifiées et transformées pour nos besoins.<br>3 - A stocker une valeur et des informations concernant un sujet.<br>4 - Elles servent à écrire dans le shell.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
+        contentChoices.innerHTML = "1 - Elles servent à nous simplifier la vie.<br>2 - Elles servent à être exploitée pour nos besoins.<br>3 - A stocker une valeur et des informations.<br>4 - Elles servent à écrire dans le shell.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
 
         content.appendChild(contentChoices);
         content.appendChild(containerInput);
@@ -268,7 +268,7 @@ button.addEventListener("click", () => {
     } else if (currentPage == 10) {
         currentPage = 11;
         title.innerHTML = "Question 10/10";
-        content.innerHTML = "Quelle sera le type de valeur affichée dans le shell après avoir entrer ce qui suit ?<br>>>> True";
+        content.innerHTML = "Quel sera le type de valeur affiché dans le shell après avoir entrer ce qui suit ?<br>>>> True";
         
         let contentChoices = document.createElement("div");
         contentChoices.classList.add("pages-quizz-code-exemple");
