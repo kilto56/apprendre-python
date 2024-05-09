@@ -6,8 +6,9 @@ let quizzPage = document.querySelector(".popup-quizz");
 let startButton = document.querySelector(".start-quizz-sdb");
 let body = document.querySelector("body");
 
+let quizzDone = false;
+
 startButton.addEventListener("click", () => {
-    startButton.classList.add("active");
     quizzPage.classList.remove("quizz-sdb-hidden");
     quizzPage.classList.add("display-flex");
     body.scrollIntoView({
@@ -18,7 +19,10 @@ startButton.addEventListener("click", () => {
     setTimeout(() => {
         body.classList.add("body-popup-quizz-sdb");
     }, 1000);
-    
+    if (quizzDone) {
+        setGaugeValue(0);
+        currentPage = 11;
+    };
 });
 
 containerInput = document.createElement("div");
@@ -51,7 +55,6 @@ function setGaugeValue(valuee) {
     }turn)`;
 
     let textPourcentage = 0;
-    console.log(value);
     
     var result = setInterval(() => {
         textPourcentage += 1;
@@ -104,16 +107,19 @@ button.addEventListener("click", () => {
                 score += 1;
             };
         } else if (currentPage === 11) {
-            if (input2.checked) {
-                score += 1;
+            if (!quizzDone) {
+                if (input2.checked) {
+                    score += 1;
+                };
             };
         };
 
-
-        input1.checked = false;
-        input2.checked = false;
-        input3.checked = false;
-        input4.checked = false;
+        if (!quizzDone) {
+            input1.checked = false;
+            input2.checked = false;
+            input3.checked = false;
+            input4.checked = false;
+        };
     };
     
 
@@ -285,7 +291,7 @@ button.addEventListener("click", () => {
         
         button.innerHTML = "Terminer";
     } else if (currentPage == 11) {
-        currentPage = 0;
+        currentPage = 12;
         title.innerHTML = "Résultat";
         if (score > 7) {
             content.innerHTML = "Bravo, vous avez réussi le quizz !";
@@ -310,18 +316,20 @@ button.addEventListener("click", () => {
         content.style.justifyContent = "center";
         content.style.alignItems = "center";
 
-        score = 10 * score;
+        if (!quizzDone) {
+            score = 10 * score;
+        };
 
         setTimeout(() => {
             setGaugeValue(score);
         }, 500);
         
-
+        quizzDone = true;
         button.innerHTML = "Fermer";
     } else {
-        currentPage = 1;
         quizzPage.classList.add("quizz-sdb-hidden");
         quizzPage.classList.remove("display-flex");
         body.classList.remove("body-popup-quizz-sdb");
+        setGaugeValue(0);
     };
 });
