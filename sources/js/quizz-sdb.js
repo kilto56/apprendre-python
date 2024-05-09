@@ -15,6 +15,10 @@ startButton.addEventListener("click", () => {
             block: "center",
             inline: "center" 
     });
+    setTimeout(() => {
+        body.classList.add("body-popup-quizz-sdb");
+    }, 1000);
+    
 });
 
 containerInput = document.createElement("div");
@@ -29,15 +33,90 @@ for (let i = 1; i <= 4; i++) {
     inputNLabel.appendChild(p);
     let input = document.createElement("input");
     input.setAttribute("type", "checkbox");
+    input.setAttribute("id", `quizz-sdb-input-${i}`)
     input.classList.add("quizz-input");
     inputNLabel.appendChild(input);
     containerInput.appendChild(inputNLabel);
 };
 
-
 let currentPage = 1;
+let score = 0;
+
+const gaugeElement = document.querySelector(".gauge");
+
+function setGaugeValue(valuee) {
+    let value = valuee;
+    document.querySelector(".gauge__fill").style.transform = `rotate(${
+        value / 200
+    }turn)`;
+
+    let textPourcentage = 0;
+    console.log(value);
+    
+    var result = setInterval(() => {
+        textPourcentage += 1;
+        if (textPourcentage >= value) clearInterval(result);
+        document.querySelector(".gauge__cover").textContent = `${Math.round(textPourcentage)}%`;
+    }, 8);
+};
 
 button.addEventListener("click", () => {
+    let input1 = document.getElementById("quizz-sdb-input-1");
+    let input2 = document.getElementById("quizz-sdb-input-2");
+    let input3 = document.getElementById("quizz-sdb-input-3");
+    let input4 = document.getElementById("quizz-sdb-input-4");
+
+    if (currentPage > 1) {
+        if (currentPage === 2) {
+            if (input2.checked && input4.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 3) {
+            if (input2.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 4) {
+            if (input2.checked && input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 5) {
+            if (input4.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 6) {
+            if (input2.checked && input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 7) {
+            if (input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 8) {
+            if (input1.checked && input2.checked && input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 9) {
+            if (input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 10) {
+            if (input3.checked) {
+                score += 1;
+            };
+        } else if (currentPage === 11) {
+            if (input2.checked) {
+                score += 1;
+            };
+        };
+
+
+        input1.checked = false;
+        input2.checked = false;
+        input3.checked = false;
+        input4.checked = false;
+    };
+    
+
     if (currentPage == 1) {
         currentPage = 2;
         title.innerHTML = "Question 1/10";
@@ -82,7 +161,7 @@ button.addEventListener("click", () => {
         let contentChoicesThree = document.createElement("div");
         contentChoicesThree.style.color = "black";
         contentChoicesThree.style.margin = "15px";
-        contentChoicesThree.innerHTML = "1 - La sortie de code sera &quot;helloworld&quot; pour le premier et &quot;Hello world !&quot; pour le deuxième.<br>2 - Le nombre de lignes de code.<br>3 - Aucune sur le résultat dans le shell.<br>4 - Il y aura écrit : helloworld = &quot;Hello world !&quot;, après avoir éxecuté le code.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
+        contentChoicesThree.innerHTML = "1 - La sortie de code sera &quot;helloworld&quot; pour le premier et &quot;Hello world !&quot; pour le deuxième.<br>2 - Le nombre de lignes de code.<br>3 - Aucune sur le résultat dans le shell.<br>4 - Il y aura écrit : helloworld = &quot;Hello world !&quot;, après avoir éxecuté le premier code.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
 
 
         content.appendChild(contentChoices);
@@ -95,7 +174,7 @@ button.addEventListener("click", () => {
     } else if (currentPage == 4) {
         currentPage = 5;
         title.innerHTML = "Question 4/10";
-        content.innerHTML = "Pourquoi ne faut-il pas mettre d'espace entre deux mots du nom de ma variable lorsqu'on la crée ?";
+        content.innerHTML = "Pourquoi ne faut-il pas mettre d'espace entre deux mots du nom d'une variable lorsqu'on la crée ?";
         
         let contentChoices = document.createElement("div");
         contentChoices.style.color = "black";
@@ -198,7 +277,7 @@ button.addEventListener("click", () => {
         let contentChoicesTwo = document.createElement("div");
         contentChoicesTwo.style.color = "black";
         contentChoicesTwo.style.margin = "15px";
-        contentChoicesTwo.innerHTML = "1 - Un nombre entier.<br>2 - Un booléen.<br>3 - Une chaine de caractères.<br>4 - Un nombre flottant.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
+        contentChoicesTwo.innerHTML = "1 - Un nombre entier.<br>2 - Une chaine de caractères.<br>3 - Un booléen.<br>4 - Un nombre flottant.<br><br><i style='color: grey;'>(Choisissez la ou les bonnes réponses.)</i>";
 
         content.appendChild(contentChoices);
         content.appendChild(contentChoicesTwo);
@@ -208,11 +287,41 @@ button.addEventListener("click", () => {
     } else if (currentPage == 11) {
         currentPage = 0;
         title.innerHTML = "Résultat";
-        content.innerHTML = "";
+        if (score > 7) {
+            content.innerHTML = "Bravo, vous avez réussi le quizz !";
+        } else {
+            content.innerHTML = "Dommage, réessayez après une petite pause !";
+        };
+
+        let contentPourcent = document.createElement("div");
+        contentPourcent.classList.add("gauge");
+        let gaugeBody = document.createElement("div");
+        gaugeBody.classList.add("gauge__body");
+        contentPourcent.appendChild(gaugeBody);
+        let gaugeFill = document.createElement("div");
+        gaugeFill.classList.add("gauge__fill");
+        let gaugeCover = document.createElement("div");
+        gaugeCover.classList.add("gauge__cover");
+        gaugeBody.appendChild(gaugeFill);
+        gaugeBody.appendChild(gaugeCover);
+        content.appendChild(contentPourcent);
+        content.style.display = "flex";
+        content.style.flexDirection = "column";
+        content.style.justifyContent = "center";
+        content.style.alignItems = "center";
+
+        score = 10 * score;
+
+        setTimeout(() => {
+            setGaugeValue(score);
+        }, 500);
+        
+
         button.innerHTML = "Fermer";
     } else {
         currentPage = 1;
         quizzPage.classList.add("quizz-sdb-hidden");
         quizzPage.classList.remove("display-flex");
+        body.classList.remove("body-popup-quizz-sdb");
     };
 });
