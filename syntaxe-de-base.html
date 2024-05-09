@@ -216,7 +216,7 @@
             <hr>
             <br>
             <div class="contain-variables">
-                <p>Le concept est simple : replacez les étapes dans le bon ordre ! <br><i>(PC recommendé)</i></p>
+                <p>Le concept est simple : replacez les étapes dans le bon ordre ! <br><i>(PC recommandé)</i></p>
                 <div class="contain-acti-var">
                     <div class="left-contain-acti-var">
                         <div class="contain-list-step">
@@ -328,7 +328,7 @@
                 <div class="note-melange">
                     <div class="note-melange-barre-cote"></div>
                     <div class="note-melange-content">
-                        <div class="note-melange-title"><h4>Note - Les variables</h4></div>
+                        <div class="note-melange-title"><h4>Note - Modifier les variables</h4></div>
                         <div class="note-melange-description">
                             <p>
                                 &nbsp;&nbsp;Pour modifier une variable il suffit de reprendre le nom de la variable et de lui ajouter une nouvelle valeur !
@@ -351,10 +351,69 @@
                         </div>
                     </div>
                 </div>
+                <div class="note-melange">
+                    <div class="note-melange-barre-cote"></div>
+                    <div class="note-melange-content">
+                        <div class="note-melange-title"><h4>Note - Faire des commentaires</h4></div>
+                        <div class="note-melange-description">
+                            <p>
+                                &nbsp;&nbsp;Pour faire des commentaires sur un programme (écrire du texte qui ne sera pas pris en compte dans le code), il suffit de mettre un # suivi de notre texte !
+                            </p>
+                            <div class="note-code-exemple">
+                                <span class="code-com">#Instanciation de ma_variable</span><br>
+                                <span class="code-var-lightblue">ma_variable</span> <span class="code-exemple-p">=</span> <span class="code-text-brown">"abcd"</span><br>
+                                <br>
+                                <span class="code-com">#ou</span><br>
+                                <br>
+                                <span class="code-var-lightblue">ma_variable</span> <span class="code-exemple-p">=</span> <span class="code-text-brown">"abcd"</span> <span class="code-com">#Instanciation de ma_variable</span><br>
+                            </div>
+                            <p>
+                                &nbsp;&nbsp;Attention ! Les commentaires peuvent etre placés uniquement en fin de ligne ou seuls sur une ligne !
+                                <br>
+                                &nbsp;&nbsp;Les commentaires servent donc à donner du sens à notre code par le langage humain mais aussi à donner de simples indiquations !
+                                <br>
+                                &nbsp;&nbsp;Sinon, le programme ignorera le code comme l'exemple ci-dessous !
+                            </p>
+                            <div class="note-code-exemple">
+                                <span class="code-com">#Instanciation de ma_variable ma_variable = "abc"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-sdb-quizz">
+                    <button class="start-quizz-sdb">Commencer le quizz</button>
+                </div>
+
+                <!--Popup quizz-->
+                <div class="popup-quizz quizz-sdb-hidden">
+                    <div class="quizz-sdb" id="quizz-sdb">
+                        <div class="quizz-quizz-sdb">
+                            <div class="pages-quizz">
+                                <div class="pages-quizz-title">
+                                    <h4>Commencer le Quizz</h4>
+                                </div>
+                                <div class="pages-quizz-content">
+                                    <p>
+                                        &nbsp;&nbsp;Tu vas donc pouvoir te tester sur les différentes 
+                                        questions qui vont suivre. <b>Une ou plusieurs réponses</b> sont à
+                                        cocher. À la fin, tu obtiendras ton pourcentage de bonnes réponses.
+                                        Le but étant d'avoir au minimum 80% pour pouvoir passer à la suite
+                                        sans soucis ! <br>
+                                        <br />
+                                        <br />
+                                        &nbsp;&nbsp;Bonne chance ! Et attention aux pièges !
+                                    </p>
+                                </div>
+                                <div class="pages-quizz-button">
+                                    <button>Lancer le Quizz</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
     <!--Footer-->
     <div class="footer">
@@ -368,13 +427,12 @@
         </div>
     </div>
 
-    <!--<div id="root"></div>
-
-    <script src="./sources/react/setup.jsx"></script>-->
     <script src="./sources/js/script.js"></script>
+    <script src="./sources/js/quizz-sdb.js"></script>
     <script src="./sources/js/code-exemple.js"></script>
     <script src="./sources/js/rotate-valeurs.js"></script>
     <script src="./sources/js/grabndrop-stepvar.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://kit.fontawesome.com/4f9ce9048d.js" crossorigin="anonymous"></script>
     <script src="./sources/js/sommaire-sdb.js"></script>
     <script src="DragDropTouch.js"></script>

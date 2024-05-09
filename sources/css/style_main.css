@@ -15,6 +15,7 @@ li {
 
 body {
     background-color: black;
+    position: relative;
 }
 
 h1 {
@@ -354,6 +355,10 @@ pre {
 
 .code-yellow {
     color: rgb(231, 231, 129);
+}
+
+.code-com {
+    color: rgb(125, 125, 125);
 }
 
 .code-caract-yellow {
@@ -955,4 +960,133 @@ pre {
     background-color: #303030;
     border-radius: 10px;
     margin: 15px;
+}
+
+.start-quizz-sdb {
+    bottom: 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+}
+
+.start-quizz-sdb:hover {
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: 2px;
+    box-shadow: 2px 3px 10px grey;
+    font-size: 90%;
+}
+
+.button-sdb-quizz {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* QUIZZ SDB */
+.quizz-sdb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e5e5;
+    width: 80%;
+    border-radius: 20px;
+}
+
+/*
+.quizz-quizz-sdb {
+    user-select: none;
+    pointer-events: none;
+}
+*/
+
+.quizz-quizz-sdb {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.pages-quizz-title {
+    margin: 10px;
+}
+
+.pages-quizz-title h4 {
+    color: black;
+    font-size: 140%;
+}
+
+.pages-quizz-content {
+    margin: 20px;
+}
+
+.pages-quizz-content p, b {
+    text-align: justify;
+    color: black;
+}
+
+.pages-quizz-button {
+    width: 100%;
+}
+
+.pages-quizz-button button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    color: black;
+    border-radius: 12px;
+    background: linear-gradient(to right, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    transition: all .3s ease;
+}
+
+.pages-quizz-button button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 2px 3px 10px grey;
+    font-size: 90%;
+}
+
+.pages-quizz-code-exemple {
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.quizz-sdb-hidden {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.popup-quizz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgb(0, 0, 0, .75);
+    align-items: center;
+    justify-content: center;
+}
+
+.quizz-input {
+    padding: 5px;
+    height: 15px;
+    width: 15px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.quizz-input:checked {
+    background-color: #628ae0;
 }

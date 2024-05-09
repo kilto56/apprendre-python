@@ -16,7 +16,7 @@ chaineCaract.addEventListener("click", () => {
         pChaineCaract.classList.toggle("invert");
         pChaineCaract.classList.toggle("justify-texte");
         if (!rotatedCard[0]) {
-            pChaineCaract.innerHTML = "La chaine de caractère est symbolisée par des guillemets autour d'un texte. Elle sert à communiquer des informations écrites !<br><span class='code-caract-blue align-texte extract-code'>&quot;Hello world !&quot;</span>";
+            pChaineCaract.innerHTML = "La chaine de caractère est symbolisée par des guillemets autour d'un texte. Elle sert à communiquer des informations écrites !<br><span class='code-text-brown align-texte extract-code'>&quot;Hello world !&quot;</span>";
             rotatedCard[0] = !rotatedCard[0];
         } else {
             pChaineCaract.innerHTML = "La chaine de caractères";
