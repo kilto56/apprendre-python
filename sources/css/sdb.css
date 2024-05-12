@@ -1,0 +1,920 @@
+.apprendre-page {
+    background-color: white;
+    padding: 20px;
+}
+
+.theme-section {
+    padding: 2px;
+    color: black;
+}
+
+.theme details {
+    cursor: pointer;
+}
+
+.theme details summary {
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.theme .details1 {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #d362e0;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+}
+
+.theme .details1[open] summary {
+    border-bottom: solid 1px #d362e0;
+    transition: all 0.5s ease;
+    background-color: lightgrey;
+    border-radius: 10px 10px 0 0;
+}
+
+.theme details[open] {
+    transition: all 0.5s ease;
+    max-height: 1520px;
+    overflow: visible;
+}
+
+.code-exemple-p {
+    color: white;
+}
+
+.theme details p {
+    color: black;
+    font-size: 13.5px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.theme details b, .theme details u {
+    color: black;
+}
+
+.theme details[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+    from {
+        opacity: 0;
+        margin-left: -10px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.intro h1 {
+    color: black;
+    font-style: italic;
+}
+
+.intro {
+    padding: 10px;
+}
+
+.theme .details2 {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #9d62e0;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+}
+
+.theme .details2[open] summary {
+    border-bottom: solid 1px #9d62e0;
+    transition: all 0.5s ease;
+    background-color: lightgrey;
+}
+
+.theme .details3 {
+    color: black;
+    font-size: 13.5px;
+    border: solid 1px #628ae0;
+    transition: all 0.7s ease;
+    max-height: 37px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (max-width: 420px) {
+    .theme .details3 {
+        max-height: 55px;
+    }
+}
+
+.theme .details3[open] summary {
+    border-bottom: solid 1px #628ae0;
+    transition: all 0.5s ease;
+    background-color: lightgrey;
+}
+
+.code-exemple-before-starting {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(80, 80, 80);
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.code-exemple-before-starting .head-code {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.code-exemple-before-starting .head-code .python-code, .code-exemple-before-starting .head-code .js-code, .code-exemple-before-starting .head-code .cpp-code {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-top: solid 1px black;
+    padding: 10px;
+    width: 33%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.python-code {
+    border-radius: 10px 0 0 0;
+}
+
+.cpp-code {
+    border-radius: 0 10px 0 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .code-exemple-before-starting .head-code .python-code:hover, .code-exemple-before-starting .head-code .js-code:hover, .code-exemple-before-starting .head-code .cpp-code:hover {
+        background-color: rgb(92, 92, 92);
+        transition: all 0.3s ease;
+    }
+}
+
+.code-n-output {
+    background-color: rgb(48, 48, 48);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+}
+
+.not-selected {
+    border-bottom: solid 1px black;
+}
+
+.selected {
+    background-color: rgb(48, 48, 48);
+}
+
+.code-exemple {
+    width: 60%;
+    border-right: solid 2px black;
+    padding: 10px;
+}
+
+.output-exemple {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.code-yellow {
+    color: rgb(231, 231, 129);
+}
+
+.code-com {
+    color: rgb(125, 125, 125);
+}
+
+.code-caract-yellow {
+    color: rgb(201, 201, 49);
+}
+
+.code-caract-green {
+    color: rgb(168, 239, 159);
+}
+
+.code-text-brown {
+    color: rgb(230, 146, 97);
+}
+
+.code-var-lightblue {
+    color: lightblue;
+}
+
+.code-caract-blue {
+    color: rgb(112, 112, 255);
+}
+
+.code-comment-green {
+    color: green;
+}
+
+.code-text-violet {
+    color: #9d62e0;
+}
+
+.code-text-red {
+    color: red;
+}
+
+.extract-code {
+    position: relative;
+    top: 20px;
+    left: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #303030;
+}
+
+.recap h3 {
+    color: black;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.recap {
+    padding: 10px;
+}
+
+.recap-txt p {
+    color: black;
+    text-align: justify;
+}
+
+.recap b {
+    color: black;
+}
+
+.recap-txt-p {
+    margin: 20px 10px 0 10px;
+}
+
+.ul-recap {
+    padding: 10px 20px;
+    margin-left: 40px;
+}
+
+.valeurs {
+    padding: 10px 20px;
+}
+
+.texte, .number-int, .number-float, .bool {
+    background-color: rgb(244, 246, 254);
+    padding: 20px 20px 20px 0;
+    border: solid 1px rgb(144, 144, 144);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    margin: 5px;
+    box-shadow: 0 0 10px rgb(220, 243, 255);
+    display: flex;
+    max-height: 100px;
+}
+
+.texte i, .number-int i, .number-float i, .bool i {
+    color: black;
+    text-align: right;
+    width: 100%;
+    font-size: 11px;
+    position: relative;
+    top: 10px;
+    transition: all 0.2s ease;
+}
+
+.texte:hover i, .number-int:hover i, .number-float:hover i, .bool:hover i {
+    color: rgb(94, 94, 94);
+    transition: all 0.2s ease;
+}
+
+.texte:hover, .number-int:hover, .number-float:hover, .bool:hover {
+    cursor: pointer;
+}
+
+.texte:hover p, .number-int:hover p, .number-float:hover p, .bool:hover p {
+    color: rgb(94, 94, 94);
+    transition: all 0.2s ease;
+}
+
+.rotated {
+    transform: rotateY(180deg);
+    transition: all 0.5s ease;
+    max-height: 250px;
+}
+
+.invert {
+    transform: scaleX(-1);
+}
+
+.valeurs h1 {
+    color: black;
+    font-style: italic;
+}
+
+.valeurs p {
+    color: black;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.valeurs p b {
+    color: black;
+}
+
+.types-valeurs {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+    @media only screen and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.contain-valeurs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ruban {
+    width: 3px;
+    background: linear-gradient(#d362e0, #9d62e0, #628ae0);
+    margin-right: 9px;
+    border-radius: 0 10px 10px 0;
+}
+
+.indice-valeurs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.justify-texte {
+    text-align: justify;
+}
+
+.align-texte {
+    text-align: center;
+}
+
+.code-python {
+    margin: 20px;
+    display: flex;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    height: 400px;
+    @media only screen and (max-width: 550px) {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        height: 600px;
+    }
+}
+
+.code-python-script {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: solid 1px black;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.code-python-output {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: solid 1px black;
+    text-align: center;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.code-python-script-title, .code-python-output-title {
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+
+.code-python-output-title {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.one-title {
+    padding: 10px;
+    width: 70%;
+}
+
+.code-python-script-title {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.launch-code {
+    height: 100%;
+    width: 20%;
+    width: 30%;
+    background-color: #83FBFD;
+    border: none;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.launch-code:hover {
+    box-shadow: 0 0 10px white;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    font-size: 90%;
+}
+
+.code-python-script-text textarea {
+    background: transparent;
+    resize: none;
+    padding: 2%;
+    border: none;
+    width: 95.5%;
+    height: 342px;
+}
+
+.code-python-script-text textarea:focus {
+    border: solid 1px black;
+    outline: solid 1px grey;
+}
+
+.output-code {
+    @media only screen and (max-width: 550px) {
+        height: 142px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.variables {
+    padding: 10px;
+}
+
+.variables h1 {
+    padding: 10px;
+    color: black;
+    font-style: italic;
+}
+
+.variables p {
+    color: black;
+    padding: 0px 20px;
+}
+
+.variables p b, .variables p u {
+    color: black;
+}
+
+.variables hr {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.contain-variables {
+    padding: 10px;
+}
+
+.contain-variables p i {
+    color: black;
+    text-align: center
+}
+
+.contain-acti-var {
+    padding: 10px;
+    color: black;
+    display: flex;
+    @media only screen and (max-width: 880px) {
+        flex-direction: column;
+    }
+}
+
+.left-contain-acti-var {
+    height: auto;
+    overflow: scroll;
+    scrollbar-color: grey grey;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+}
+
+.left-contain-acti-var, .right-contain-acti-var {
+    background-color: #F4F6FE;
+    color: black;
+    width: 100%;
+    border: solid 1px grey;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 2px 2px;
+    height: inherit;
+    @media only screen and (max-width: 880px) {
+        height: 210px;
+    }
+}
+
+.right-contain-acti-var {
+    display: flex;
+    @media only screen and (max-width: 450px) {
+        height: 270px;
+    }
+}
+
+.list-step {
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to left, #d362e05d, #9d62e066, #628ae063);   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 3px 1px 1px rgb(160, 132, 157);
+    border-top: solid 1px grey;
+    border-left: solid 1px grey;
+    position: relative;
+    top: -1px;
+    left: -1px;
+}
+
+.list-step i {
+    color: black;
+    margin-right: 10px;
+    text-align: left;
+    width: 20%;
+}
+
+.list-step span {
+    text-align: center;
+    color: black;
+    font-size: 85%;
+    width: 80%;
+}
+
+.dragged {
+    opacity: .25;
+}
+
+.dropped {
+    margin: 5px 0;
+}
+
+.step-index {
+    width: 10px;
+    border-right: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps-index1, .steps-index2, .steps-index3, .steps-index4 {
+    height: 100%;
+    color: black;
+    position: relative;
+    right: 8px;
+    top: 20px;
+    @media only screen and (max-width: 400px) {
+        padding: 15px 0;
+    }
+}
+
+.right-contain-acti-var-steps {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.contain-list-step {
+    border: dashed 1px black;
+    margin: 5px 0;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.valid-acti-var {
+    padding: 10px;
+    width: 100%;
+}
+
+.valid-acti-var button {
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    margin-left: 15px;
+    border: none;
+    color: black;
+    border-radius: 100px;
+    background-color: lightgreen;
+    box-shadow: 0 0 10px green;
+    transition: all .2s ease;
+}
+
+.valid-acti-var button:hover {
+    background-color: lightgreen;
+    box-shadow: 0 0 15px rgb(83, 217, 83);
+    transition: all .2s ease;
+}
+
+.result-acti-var {
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.empty {
+    height: 45px;
+}
+
+.suite-var {
+    padding: 0 35px 0;
+}
+
+.suite-var ol {
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+.suite-var-code-exemple {
+    padding: 20px 0px;
+    background-color: #303030;
+    border-radius: 10px;
+}
+
+.shell h1 {
+    padding: 10px;
+    color: black;
+    font-style: italic;
+}
+
+.shell p {
+    color: black;
+    padding: 0px 20px;
+}
+
+.shell p b, .shell p u {
+    color: black;
+}
+
+.shell-code-exemple {
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 10px;
+}
+
+.melange {
+    padding: 10px;
+}
+
+.melange h1 {
+    color: black;
+}
+
+.melange-content {
+    padding: 10px;
+}
+
+.melange-content p {
+    color: black;
+}
+
+.note-melange {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.note-melange-barre-cote {
+    width: 10px;
+    background: linear-gradient(to bottom, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    border-radius: 5px 0 0 5px;
+}
+
+.note-melange-content {
+    margin: 10px;
+}
+
+.note-melange-title h4 {
+    color: black;
+}
+
+.note-melange-description {
+    padding: 10px;
+}
+
+.note-melange-description p {
+    color: black;
+}
+
+.note-code-exemple {
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.start-quizz-sdb {
+    bottom: 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+}
+
+.start-quizz-sdb:hover {
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: 2px;
+    box-shadow: 2px 3px 10px grey;
+    font-size: 90%;
+}
+
+.button-sdb-quizz {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* QUIZZ SDB */
+.quizz-sdb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e5e5;
+    width: 80%;
+    border-radius: 20px;
+}
+
+/*
+.quizz-quizz-sdb {
+    user-select: none;
+    pointer-events: none;
+}
+*/
+
+.quizz-quizz-sdb {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.pages-quizz-title {
+    margin: 10px;
+}
+
+.pages-quizz-title h4 {
+    color: black;
+    font-size: 140%;
+}
+
+.pages-quizz-content {
+    margin: 20px;
+}
+
+.pages-quizz-content p, b {
+    text-align: justify;
+    color: black;
+}
+
+.pages-quizz-button {
+    width: 100%;
+}
+
+.pages-quizz-button button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    color: black;
+    border-radius: 12px;
+    background: linear-gradient(to right, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    transition: all .3s ease;
+}
+
+.pages-quizz-button button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 2px 3px 10px grey;
+    font-size: 90%;
+}
+
+.pages-quizz-code-exemple {
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.quizz-sdb-hidden {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.popup-quizz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .75);
+    align-items: center;
+    justify-content: center;
+}
+
+.quizz-input {
+    padding: 5px;
+    height: 15px;
+    width: 15px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.quizz-input:checked {
+    background-color: #628ae0;
+}
+
+.body-popup-quizz-sdb {
+    height: 100%;
+    overflow: hidden;
+}
+
+.gauge {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: #004033;
+}
+  
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #b4c0be;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+  
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: linear-gradient(to right, #d362e0a0, #2e1cb38a, #2e1cb38a, #2e1cb38a, #74fbf2ab);
+    transform-origin: center top;
+    transition: transform 1s ease;
+}
+  
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: #e5e5e5;
+    color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}  

@@ -1,0 +1,33 @@
+symboles :
+    maths :
+        +
+        -
+        /
+        //
+        %
+        *
+        **
+    comparaisons :
+        <
+        >
+        <=
+        >=
+        ==
+        !=
+    varaibles :
+        ,
+        +=
+        *=
+        /=
+        -=
+        {}
+        []
+    autres :
+        not
+        in
+        and
+        or
+        =
+
+fonctions :
+    ...
