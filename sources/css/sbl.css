@@ -12,3 +12,102 @@
     color: black;
     font-style: italic;
 }
+
+.intro p {
+    color: black;
+    padding: 10px;
+}
+
+.arithm {
+    padding: 10px;
+}
+
+.arithm h1 {
+    color: black;
+    font-style: italic;
+}
+
+.arithm p {
+    color: black;
+    padding: 10px;
+}
+
+.slider {
+    color: black;
+    background-color: #e5e5e5;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 10px rgb(0, 0, 0, .15);
+}
+
+.arrow-slider {
+    height: 100%;
+    padding: 30px;
+}
+
+.arrow-slider i {
+    color: darkgrey;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.arrow-slider:hover i {
+    color: rgb(124, 124, 124);
+    transition: all .2s ease;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 20px 0;
+    pointer-events: none;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+    height: 0px;
+    pointer-events: none;
+}
+
+.slide {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    flex: 0 0 90%;
+    margin: 0 5%;
+}
+
+.slide h2 {
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.slide p {
+    color: black;
+    text-align: justify;
+}
+
+.slide p b {
+    color: black;
+}
+
+.slide div {
+    text-align: left !important;
+    color: black;
+}
+
+.slide b {
+    color: black;
+    padding: 15px;
+}
+
+.python-code {
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 10px;
+}

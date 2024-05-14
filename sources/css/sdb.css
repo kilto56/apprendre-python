@@ -42,10 +42,6 @@
     overflow: visible;
 }
 
-.code-exemple-p {
-    color: white;
-}
-
 .theme details p {
     color: black;
     font-size: 13.5px;
@@ -185,46 +181,6 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-}
-
-.code-yellow {
-    color: rgb(231, 231, 129);
-}
-
-.code-com {
-    color: rgb(125, 125, 125);
-}
-
-.code-caract-yellow {
-    color: rgb(201, 201, 49);
-}
-
-.code-caract-green {
-    color: rgb(168, 239, 159);
-}
-
-.code-text-brown {
-    color: rgb(230, 146, 97);
-}
-
-.code-var-lightblue {
-    color: lightblue;
-}
-
-.code-caract-blue {
-    color: rgb(112, 112, 255);
-}
-
-.code-comment-green {
-    color: green;
-}
-
-.code-text-violet {
-    color: #9d62e0;
-}
-
-.code-text-red {
-    color: red;
 }
 
 .extract-code {
